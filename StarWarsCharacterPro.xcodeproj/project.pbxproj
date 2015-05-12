@@ -9,11 +9,26 @@
 /* Begin PBXBuildFile section */
 		B11735561AFE6FCC000BD7C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11735551AFE6FCC000BD7C0 /* AppDelegate.swift */; };
 		B11735591AFE6FCC000BD7C0 /* StarWarsCharacterPro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B11735571AFE6FCC000BD7C0 /* StarWarsCharacterPro.xcdatamodeld */; };
-		B117355B1AFE6FCC000BD7C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B117355A1AFE6FCC000BD7C0 /* ViewController.swift */; };
-		B117355E1AFE6FCC000BD7C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B117355C1AFE6FCC000BD7C0 /* Main.storyboard */; };
 		B11735601AFE6FCC000BD7C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B117355F1AFE6FCC000BD7C0 /* Images.xcassets */; };
 		B11735631AFE6FCC000BD7C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B11735611AFE6FCC000BD7C0 /* LaunchScreen.xib */; };
 		B117356F1AFE6FCC000BD7C0 /* StarWarsCharacterProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B117356E1AFE6FCC000BD7C0 /* StarWarsCharacterProTests.swift */; };
+		B11735791AFE736C000BD7C0 /* StarWarsCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11735781AFE736B000BD7C0 /* StarWarsCharacter.swift */; };
+		B117357C1AFE90C3000BD7C0 /* StarWarsUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B117357B1AFE90C3000BD7C0 /* StarWarsUniverse.swift */; };
+		B19D66241B0295BF00B7AFED /* ObiWan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19D66231B0295BF00B7AFED /* ObiWan.jpg */; };
+		B19D66261B029DC400B7AFED /* obiwan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B19D66251B029DC400B7AFED /* obiwan.mp3 */; };
+		B19D66281B029F1A00B7AFED /* yoda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19D66271B029F1A00B7AFED /* yoda.jpg */; };
+		B19D662B1B029F8000B7AFED /* Luke.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19D662A1B029F8000B7AFED /* Luke.jpg */; };
+		B19D662D1B02A05F00B7AFED /* luke.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B19D662C1B02A05F00B7AFED /* luke.mp3 */; };
+		B19D66301B02A11600B7AFED /* chewbacca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19D662F1B02A11600B7AFED /* chewbacca.jpg */; };
+		B19D66331B02A12700B7AFED /* R2-D2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19D66321B02A12700B7AFED /* R2-D2.jpg */; };
+		B19D663C1B02A15500B7AFED /* c3po.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19D66381B02A15500B7AFED /* c3po.jpg */; };
+		B19D663D1B02A15500B7AFED /* darthVader.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19D66391B02A15500B7AFED /* darthVader.jpg */; };
+		B19D663E1B02A15500B7AFED /* palpatine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19D663A1B02A15500B7AFED /* palpatine.jpg */; };
+		B19D663F1B02A15500B7AFED /* tarkin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19D663B1B02A15500B7AFED /* tarkin.jpg */; };
+		B19D66411B02A34800B7AFED /* Clone_trooper.png in Resources */ = {isa = PBXBuildFile; fileRef = B19D66401B02A34800B7AFED /* Clone_trooper.png */; };
+		B19D66431B02A3C300B7AFED /* trooper.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B19D66421B02A3C300B7AFED /* trooper.mp3 */; };
+		B19D66451B02A44F00B7AFED /* BobaFett.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19D66441B02A44F00B7AFED /* BobaFett.jpg */; };
+		B19D66471B02A4D700B7AFED /* boba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B19D66461B02A4D700B7AFED /* boba.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +46,35 @@
 		B11735541AFE6FCC000BD7C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B11735551AFE6FCC000BD7C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B11735581AFE6FCC000BD7C0 /* StarWarsCharacterPro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StarWarsCharacterPro.xcdatamodel; sourceTree = "<group>"; };
-		B117355A1AFE6FCC000BD7C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B117355D1AFE6FCC000BD7C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B117355F1AFE6FCC000BD7C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B11735621AFE6FCC000BD7C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B11735681AFE6FCC000BD7C0 /* StarWarsCharacterProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsCharacterProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B117356D1AFE6FCC000BD7C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B117356E1AFE6FCC000BD7C0 /* StarWarsCharacterProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsCharacterProTests.swift; sourceTree = "<group>"; };
+		B11735781AFE736B000BD7C0 /* StarWarsCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsCharacter.swift; sourceTree = "<group>"; };
+		B117357B1AFE90C3000BD7C0 /* StarWarsUniverse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsUniverse.swift; sourceTree = "<group>"; };
+		B19D66231B0295BF00B7AFED /* ObiWan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ObiWan.jpg; sourceTree = "<group>"; };
+		B19D66251B029DC400B7AFED /* obiwan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obiwan.mp3; sourceTree = "<group>"; };
+		B19D66271B029F1A00B7AFED /* yoda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yoda.jpg; sourceTree = "<group>"; };
+		B19D66291B029F2300B7AFED /* yoda.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yoda.caf; sourceTree = "<group>"; };
+		B19D662A1B029F8000B7AFED /* Luke.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Luke.jpg; sourceTree = "<group>"; };
+		B19D662C1B02A05F00B7AFED /* luke.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = luke.mp3; sourceTree = "<group>"; };
+		B19D662E1B02A10A00B7AFED /* chewbacca.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chewbacca.caf; sourceTree = "<group>"; };
+		B19D662F1B02A11600B7AFED /* chewbacca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chewbacca.jpg; sourceTree = "<group>"; };
+		B19D66311B02A12100B7AFED /* r2-d2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "r2-d2.caf"; sourceTree = "<group>"; };
+		B19D66321B02A12700B7AFED /* R2-D2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "R2-D2.jpg"; sourceTree = "<group>"; };
+		B19D66341B02A13800B7AFED /* palpatine.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = palpatine.caf; sourceTree = "<group>"; };
+		B19D66351B02A13800B7AFED /* tarkin.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tarkin.caf; sourceTree = "<group>"; };
+		B19D66361B02A13800B7AFED /* vader.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = vader.caf; sourceTree = "<group>"; };
+		B19D66371B02A13E00B7AFED /* c3po.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = c3po.caf; sourceTree = "<group>"; };
+		B19D66381B02A15500B7AFED /* c3po.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = c3po.jpg; sourceTree = "<group>"; };
+		B19D66391B02A15500B7AFED /* darthVader.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = darthVader.jpg; sourceTree = "<group>"; };
+		B19D663A1B02A15500B7AFED /* palpatine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = palpatine.jpg; sourceTree = "<group>"; };
+		B19D663B1B02A15500B7AFED /* tarkin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tarkin.jpg; sourceTree = "<group>"; };
+		B19D66401B02A34800B7AFED /* Clone_trooper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clone_trooper.png; sourceTree = "<group>"; };
+		B19D66421B02A3C300B7AFED /* trooper.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trooper.mp3; sourceTree = "<group>"; };
+		B19D66441B02A44F00B7AFED /* BobaFett.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BobaFett.jpg; sourceTree = "<group>"; };
+		B19D66461B02A4D700B7AFED /* boba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = boba.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +117,11 @@
 			isa = PBXGroup;
 			children = (
 				B11735551AFE6FCC000BD7C0 /* AppDelegate.swift */,
-				B117355A1AFE6FCC000BD7C0 /* ViewController.swift */,
-				B117355C1AFE6FCC000BD7C0 /* Main.storyboard */,
 				B117355F1AFE6FCC000BD7C0 /* Images.xcassets */,
 				B11735611AFE6FCC000BD7C0 /* LaunchScreen.xib */,
 				B11735571AFE6FCC000BD7C0 /* StarWarsCharacterPro.xcdatamodeld */,
 				B11735531AFE6FCC000BD7C0 /* Supporting Files */,
+				B117357A1AFE7372000BD7C0 /* Model */,
 			);
 			path = StarWarsCharacterPro;
 			sourceTree = "<group>";
@@ -93,6 +129,8 @@
 		B11735531AFE6FCC000BD7C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B117357E1AFE94BE000BD7C0 /* Images */,
+				B117357D1AFE94B4000BD7C0 /* Sound */,
 				B11735541AFE6FCC000BD7C0 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -113,6 +151,51 @@
 				B117356D1AFE6FCC000BD7C0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B117357A1AFE7372000BD7C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B11735781AFE736B000BD7C0 /* StarWarsCharacter.swift */,
+				B117357B1AFE90C3000BD7C0 /* StarWarsUniverse.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B117357D1AFE94B4000BD7C0 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				B19D662E1B02A10A00B7AFED /* chewbacca.caf */,
+				B19D66461B02A4D700B7AFED /* boba.mp3 */,
+				B19D66251B029DC400B7AFED /* obiwan.mp3 */,
+				B19D66421B02A3C300B7AFED /* trooper.mp3 */,
+				B19D662C1B02A05F00B7AFED /* luke.mp3 */,
+				B19D66291B029F2300B7AFED /* yoda.caf */,
+				B19D66311B02A12100B7AFED /* r2-d2.caf */,
+				B19D66341B02A13800B7AFED /* palpatine.caf */,
+				B19D66351B02A13800B7AFED /* tarkin.caf */,
+				B19D66361B02A13800B7AFED /* vader.caf */,
+				B19D66371B02A13E00B7AFED /* c3po.caf */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
+		B117357E1AFE94BE000BD7C0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B19D66271B029F1A00B7AFED /* yoda.jpg */,
+				B19D662A1B029F8000B7AFED /* Luke.jpg */,
+				B19D66231B0295BF00B7AFED /* ObiWan.jpg */,
+				B19D662F1B02A11600B7AFED /* chewbacca.jpg */,
+				B19D66321B02A12700B7AFED /* R2-D2.jpg */,
+				B19D66381B02A15500B7AFED /* c3po.jpg */,
+				B19D66391B02A15500B7AFED /* darthVader.jpg */,
+				B19D66401B02A34800B7AFED /* Clone_trooper.png */,
+				B19D66441B02A44F00B7AFED /* BobaFett.jpg */,
+				B19D663A1B02A15500B7AFED /* palpatine.jpg */,
+				B19D663B1B02A15500B7AFED /* tarkin.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +278,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B117355E1AFE6FCC000BD7C0 /* Main.storyboard in Resources */,
+				B19D66241B0295BF00B7AFED /* ObiWan.jpg in Resources */,
+				B19D662B1B029F8000B7AFED /* Luke.jpg in Resources */,
+				B19D663E1B02A15500B7AFED /* palpatine.jpg in Resources */,
+				B19D662D1B02A05F00B7AFED /* luke.mp3 in Resources */,
+				B19D66281B029F1A00B7AFED /* yoda.jpg in Resources */,
 				B11735631AFE6FCC000BD7C0 /* LaunchScreen.xib in Resources */,
+				B19D66301B02A11600B7AFED /* chewbacca.jpg in Resources */,
+				B19D66431B02A3C300B7AFED /* trooper.mp3 in Resources */,
+				B19D663F1B02A15500B7AFED /* tarkin.jpg in Resources */,
+				B19D663D1B02A15500B7AFED /* darthVader.jpg in Resources */,
+				B19D663C1B02A15500B7AFED /* c3po.jpg in Resources */,
+				B19D66471B02A4D700B7AFED /* boba.mp3 in Resources */,
+				B19D66331B02A12700B7AFED /* R2-D2.jpg in Resources */,
 				B11735601AFE6FCC000BD7C0 /* Images.xcassets in Resources */,
+				B19D66411B02A34800B7AFED /* Clone_trooper.png in Resources */,
+				B19D66451B02A44F00B7AFED /* BobaFett.jpg in Resources */,
+				B19D66261B029DC400B7AFED /* obiwan.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +312,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B117355B1AFE6FCC000BD7C0 /* ViewController.swift in Sources */,
 				B11735591AFE6FCC000BD7C0 /* StarWarsCharacterPro.xcdatamodeld in Sources */,
+				B117357C1AFE90C3000BD7C0 /* StarWarsUniverse.swift in Sources */,
+				B11735791AFE736C000BD7C0 /* StarWarsCharacter.swift in Sources */,
 				B11735561AFE6FCC000BD7C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,14 +338,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B117355C1AFE6FCC000BD7C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B117355D1AFE6FCC000BD7C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B11735611AFE6FCC000BD7C0 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -415,6 +505,7 @@
 				B11735741AFE6FCC000BD7C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B11735751AFE6FCC000BD7C0 /* Build configuration list for PBXNativeTarget "StarWarsCharacterProTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +514,7 @@
 				B11735771AFE6FCC000BD7C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
