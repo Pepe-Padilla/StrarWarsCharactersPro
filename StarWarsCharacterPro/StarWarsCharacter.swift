@@ -12,15 +12,15 @@ import UIKit
 struct StarWarsCharacter {
     let characterName : String
     let alias : String?
-    let photoCharacter : UIImage
-    let soundRecord : NSURL
-    let wikiUrl: NSURL
+    let photoCharacter : UIImage?
+    let soundRecord : NSURL?
+    let wikiUrl: NSURL?
     
     init(characterName: String,
         alias: String?,
-        photoCharacter: UIImage,
-        soundRecord: NSURL,
-        wikiUrl: NSURL) {
+        photoCharacter: UIImage?,
+        soundRecord: NSURL?,
+        wikiUrl: NSURL?) {
             self.characterName = characterName
             self.alias = alias
             self.photoCharacter = photoCharacter
@@ -29,9 +29,9 @@ struct StarWarsCharacter {
     }
     
     init(characterName: String,
-        photoCharacter: UIImage,
-        soundRecord: NSURL,
-        wikiUrl: NSURL){
+        photoCharacter: UIImage?,
+        soundRecord: NSURL?,
+        wikiUrl: NSURL?){
         
             self.characterName = characterName
             self.alias = nil

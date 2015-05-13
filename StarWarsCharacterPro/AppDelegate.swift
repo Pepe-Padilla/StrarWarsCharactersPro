@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,7 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // Crear la UIWindow
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        // Crear el AyscVC
+        var aVC : StarWarsTableViewController = StarWarsTableViewController(nibName: nil, bundle: nil)
+        aVC.universeGenesis()
+        
+        var nVC : UINavigationController = UINavigationController(nibName: nil, bundle: nil)
+        nVC.pushViewController(aVC, animated: false)
+        // asignarlo a root
+        window?.rootViewController = nVC
+        
+        // Mostrarlo
+        window?.makeKeyAndVisible()
+
         return true
     }
 

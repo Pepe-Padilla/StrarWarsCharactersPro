@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WikiViewController" customModule="StarWarsCharacterPro" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="Ku7-fb-Dj0" id="jqZ-O7-aaU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wikiWeb" destination="R4w-Q6-bhE" id="62V-cg-3DQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4w-Q6-bhE">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ku7-fb-Dj0">
+                    <rect key="frame" x="290" y="290" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="R4w-Q6-bhE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NMr-VK-eMX"/>
+                <constraint firstItem="R4w-Q6-bhE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QAp-FN-W8g"/>
+                <constraint firstAttribute="centerY" secondItem="Ku7-fb-Dj0" secondAttribute="centerY" id="Ujr-50-NiJ"/>
+                <constraint firstAttribute="bottom" secondItem="R4w-Q6-bhE" secondAttribute="bottom" id="XsW-lK-U9s"/>
+                <constraint firstAttribute="trailing" secondItem="R4w-Q6-bhE" secondAttribute="trailing" id="aDY-NM-u8x"/>
+                <constraint firstAttribute="centerX" secondItem="Ku7-fb-Dj0" secondAttribute="centerX" id="fgJ-PC-STB"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
