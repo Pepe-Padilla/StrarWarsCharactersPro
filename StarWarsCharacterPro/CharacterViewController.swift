@@ -16,18 +16,22 @@ StarWarsTableViewControllerDelegate {
     
     var aSWCharacter : StarWarsCharacter?
     var player : AVAudioPlayer? // = AVAudioPlayer()
+    var audiosesion : AVAudioSession?
     
-    // MARK : Life Cycle
+    // MARK: - Life Cycle
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         edgesForExtendedLayout = UIRectEdge.None
         
         navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
         
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        AVAudioSession.sharedInstance().setActive(true, error: nil)
+        
         chargeCharacter()
     }
     
-    // MARK : Utils
+    // MARK: - Utils
     func chargeCharacter() {
         if let aChar = aSWCharacter {
             title = aChar.characterName
@@ -39,13 +43,10 @@ StarWarsTableViewControllerDelegate {
     }
     
     
-    // MARK : Actions
+    // MARK: - Actions
     @IBAction func playAction(sender: AnyObject) {
         if let aChar = aSWCharacter {
             if let urlSound = aChar.soundRecord {
-                
-                AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
-                AVAudioSession.sharedInstance().setActive(true, error: nil)
                 
                 var error:NSError?
                 var aData : NSData? = NSData(contentsOfURL: urlSound)
@@ -70,7 +71,7 @@ StarWarsTableViewControllerDelegate {
     }
     
     
-    // MARK : UISplitViewControllerDelegate
+    // MARK: - UISplitViewControllerDelegate
     
     func splitViewController(svc: UISplitViewController, willChangeToDisplayMode displayMode: UISplitViewControllerDisplayMode) {
         if displayMode == UISplitViewControllerDisplayMode.PrimaryHidden {
@@ -86,7 +87,7 @@ StarWarsTableViewControllerDelegate {
         chargeCharacter()
     }
     
-    // MARK : AVAudioPlayerDelegate
+    // MARK: - AVAudioPlayerDelegate
     /*
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
         NSLog("OK1")
