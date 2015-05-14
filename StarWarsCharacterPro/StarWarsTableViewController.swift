@@ -8,7 +8,9 @@
 
 import UIKit
 
-class StarWarsTableViewController: UITableViewController {
+class StarWarsTableViewController: UITableViewController, StarWarsTableViewControllerDelegate, AnyObject {
+    
+    var delegate : StarWarsTableViewControllerDelegate?
     
     let sectionRebel = 0
     let sectionImperial = 1
@@ -18,7 +20,7 @@ class StarWarsTableViewController: UITableViewController {
     
     
     
-    // MARK : Utils
+    // MARK: - Utils
     func universeGenesis() {
         if !genesis {
             universe.fillUniverse()
@@ -26,7 +28,7 @@ class StarWarsTableViewController: UITableViewController {
         genesis = true
     }
     
-    // MARK : Life cycle
+    // MARK: - Life cycle
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -89,6 +91,30 @@ class StarWarsTableViewController: UITableViewController {
             aSWCharacter = universe.imperial[indexPath.row]
         }
         
+        if delegate != nil {
+            delegate?.starWarsTableViewController(self, didChangeCharacter: aSWCharacter)
+        }
+        
+        // Notification
+        var nc : NSNotificationCenter = NSNotificationCenter.defaultCenter()
+        var dict : NSDictionary = ["StarWarsCharacter" : aSWCharacter]
+        var n : NSNotification = NSNotification(name: "StarWarsCharacterDidChange", object: self, userInfo: dict as [NSObject : AnyObject])
+        nc.postNotification(n)
+        
+        // default
+        var coords = [indexPath.section, indexPath.row]
+        var def : NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        def.setObject(coords, forKey: "LastStarWarsCharacter")
+        def.synchronize()
+        
+        
+    }
+    
+    // MARK: - StarWarsTableViewControllerDelegate
+    func starWarsTableViewController(swtvc: StarWarsTableViewController, didChangeCharacter: StarWarsCharacter) {
+        
+        var aSWCharacter = didChangeCharacter
+        
         var charVC : CharacterViewController = CharacterViewController(nibName: "CharacterViewController", bundle: nil)
         charVC.aSWCharacter = aSWCharacter
         
@@ -96,3 +122,12 @@ class StarWarsTableViewController: UITableViewController {
     }
 
 }
+
+
+protocol StarWarsTableViewControllerDelegate {
+    func starWarsTableViewController(swtvc: StarWarsTableViewController, didChangeCharacter: StarWarsCharacter)
+}
+
+
+
+

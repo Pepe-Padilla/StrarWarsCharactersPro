@@ -42,7 +42,7 @@ class StarWarsUniverse {
             alias: "Yoda",
             photoCharacter: UIImage(named: "yoda.jpg")!,
             soundRecord: urlSW,
-            wikiUrl: NSURL(string: "http://starwars.wikia.com/wiki/Obi-Wan_Kenobi"))
+            wikiUrl: NSURL(string: "http://starwars.wikia.com/wiki/Yoda"))
         
         // Luke Skywalker
         pathSW = mainBundle.pathForResource("luke", ofType: "mp3")

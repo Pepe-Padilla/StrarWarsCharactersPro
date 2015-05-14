@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WikiViewController: UIViewController, UIWebViewDelegate {
+class WikiViewController: UIViewController, UIWebViewDelegate, AnyObject {
     @IBOutlet weak var wikiWeb: UIWebView?
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
     var navigation : Bool = false
@@ -19,13 +19,20 @@ class WikiViewController: UIViewController, UIWebViewDelegate {
         super.viewWillAppear(animated)
         edgesForExtendedLayout = UIRectEdge.None
         
-        //displayWiki()
+        var nc : NSNotificationCenter = NSNotificationCenter.defaultCenter()
+        nc.addObserver(self, selector: "notifyCharacterChange:", name: "StarWarsCharacterDidChange", object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         displayWiki()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,14 +49,23 @@ class WikiViewController: UIViewController, UIWebViewDelegate {
             activityIndicator?.startAnimating()
             navigation = true
             title = "Wiki - " + aSWCharacter.characterName
-            //let anURL = NSURL(string: <#String#>)
             wikiWeb?.loadRequest(NSURLRequest(URL: aSWCharacter.wikiUrl!))
             wikiWeb?.delegate = self
             
             
         }
     }
-
+    
+    // MARK: - Notification StarWarsCharacterDidChange
+    func notifyCharacterChange(notification: NSNotification) {
+        var dictVal : NSDictionary? = notification.userInfo
+        
+        if let dicv = dictVal {
+            var aChar : StarWarsCharacter? = dicv.objectForKey("StarWarsCharacter") as? StarWarsCharacter
+            swCharacter = aChar
+            displayWiki()
+        }
+    }
     
     // MARK: - UIWebViewDelegate
     

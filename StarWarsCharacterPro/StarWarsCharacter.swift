@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct StarWarsCharacter {
+class StarWarsCharacter : AnyObject {
     let characterName : String
     let alias : String?
     let photoCharacter : UIImage?

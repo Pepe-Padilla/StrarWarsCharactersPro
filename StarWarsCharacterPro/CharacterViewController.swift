@@ -9,7 +9,8 @@
 import UIKit
 import AVFoundation
 
-class CharacterViewController: UIViewController, AVAudioPlayerDelegate {
+class CharacterViewController: UIViewController, AVAudioPlayerDelegate, UISplitViewControllerDelegate,
+StarWarsTableViewControllerDelegate {
 
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -20,6 +21,9 @@ class CharacterViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         edgesForExtendedLayout = UIRectEdge.None
+        
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
+        
         chargeCharacter()
     }
     
@@ -63,6 +67,23 @@ class CharacterViewController: UIViewController, AVAudioPlayerDelegate {
             
             navigationController?.pushViewController(wikiVC, animated: true)
         }
+    }
+    
+    
+    // MARK : UISplitViewControllerDelegate
+    
+    func splitViewController(svc: UISplitViewController, willChangeToDisplayMode displayMode: UISplitViewControllerDisplayMode) {
+        if displayMode == UISplitViewControllerDisplayMode.PrimaryHidden {
+            navigationItem.leftBarButtonItem = svc.displayModeButtonItem()
+        } else {
+            navigationItem.leftBarButtonItem = nil
+        }
+    }
+    
+    // MARK : StarWarsTableViewControllerDelegate
+    func starWarsTableViewController(swtvc: StarWarsTableViewController, didChangeCharacter: StarWarsCharacter) {
+        aSWCharacter = didChangeCharacter
+        chargeCharacter()
     }
     
     // MARK : AVAudioPlayerDelegate

@@ -24,10 +24,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var aVC : StarWarsTableViewController = StarWarsTableViewController(nibName: nil, bundle: nil)
         aVC.universeGenesis()
         
-        var nVC : UINavigationController = UINavigationController(nibName: nil, bundle: nil)
-        nVC.pushViewController(aVC, animated: false)
-        // asignarlo a root
-        window?.rootViewController = nVC
+        var tbVC : UINavigationController = UINavigationController(nibName: nil, bundle: nil)
+        tbVC.pushViewController(aVC, animated: false)
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+            var cVC : CharacterViewController = CharacterViewController(nibName: "CharacterViewController", bundle: nil)
+            
+            var def : NSUserDefaults = NSUserDefaults.standardUserDefaults()
+            var coords : NSArray? = def.objectForKey("LastStarWarsCharacter") as? NSArray
+            
+            if let coord = coords {
+                if coord[0].integerValue == aVC.sectionRebel {
+                    cVC.aSWCharacter = aVC.universe.rebels[coord[1].integerValue]
+                } else {
+                    cVC.aSWCharacter = aVC.universe.imperial[coord[1].integerValue]
+                }
+            } else {
+                cVC.aSWCharacter = aVC.universe.rebels[0]
+            }
+            
+            var chVC : UINavigationController = UINavigationController(nibName: nil, bundle: nil)
+            chVC.pushViewController(cVC, animated: false)
+            
+            var spVC : UISplitViewController = UISplitViewController(nibName: nil, bundle: nil)
+            spVC.viewControllers = [tbVC, chVC]
+            
+            aVC.delegate = cVC
+            spVC.delegate = cVC
+            
+            // asignarlo a root
+            window?.rootViewController = spVC
+            
+        } else {
+            aVC.delegate = aVC
+            window?.rootViewController = tbVC
+        }
+        
+        
         
         // Mostrarlo
         window?.makeKeyAndVisible()
